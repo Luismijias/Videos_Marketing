@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Diretório do repositório
+REPO_DIR="$HOME/Documents/Videos_Marketing/videos"
+
+# Mensagem de commit padrão
+COMMIT_MSG="Atualizações automáticas"
+
+# Navega até o diretório do repositório
+cd "$REPO_DIR" || exit
+
+# Atualiza o repositório local com mudanças do repositório remoto
+git pull origin master
+
+# Adiciona todas as mudanças
+git add .
+
+# Faz o commit com a mensagem padrão
+git commit -m "$COMMIT_MSG"
+
+# Envia as mudanças para o repositório remoto
+git push origin master
+
